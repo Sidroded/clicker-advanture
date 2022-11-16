@@ -17,8 +17,8 @@ public class CheckSave {
         List<String> list = Files.readAllLines(saves);
         String line;
         if (Files.exists(saves, new LinkOption[0])) {
-            for(Iterator var4 = list.iterator(); var4.hasNext(); copyLine = line) {
-                line = (String)var4.next();
+            for(Iterator iterator = list.iterator(); iterator.hasNext(); copyLine = line) {
+                line = (String)iterator.next();
             }
         } else {
             Files.createFile(saves);

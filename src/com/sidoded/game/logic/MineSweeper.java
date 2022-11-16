@@ -41,11 +41,8 @@ public class MineSweeper {
                                     if (playerChoice.contains(key)) {
                                         System.out.println("Не повторяйся!");
                                     } else {
-                                        int[] var15 = arrayMines;
-                                        int var12 = arrayMines.length;
-
-                                        for(int var13 = 0; var13 < var12; ++var13) {
-                                            int arrayMine = var15[var13];
+                                        for(int i = 0; i < arrayMines.length; ++i) {
+                                            int arrayMine = arrayMines[i];
                                             if (arrayMine == key) {
                                                 lose = true;
                                                 System.out.println("Бум");
