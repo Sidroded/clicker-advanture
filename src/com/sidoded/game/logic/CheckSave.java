@@ -2,7 +2,6 @@ package com.sidoded.game.logic;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.util.Iterator;
 import java.util.List;
@@ -16,8 +15,8 @@ public class CheckSave {
         String copyLine = null;
         List<String> list = Files.readAllLines(saves);
         String line;
-        if (Files.exists(saves, new LinkOption[0])) {
-            for(Iterator iterator = list.iterator(); iterator.hasNext(); copyLine = line) {
+        if (Files.exists(saves)) {
+            for(Iterator<String> iterator = list.iterator(); iterator.hasNext(); copyLine = line) {
                 line = (String)iterator.next();
             }
         } else {
